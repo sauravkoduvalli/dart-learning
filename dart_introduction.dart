@@ -7,17 +7,27 @@
 */
 
 
-/* --- Why use Dart? --- */
+/* --- Advantages of Dart --- */
 /*
-  - Fast & Smooth: Dart compiles to native code for speedy performance, ideal for mobile apps.
-  - Easy to Learn: Similar to familiar languages like Java or Javascript, making it approachable for new developers.
-  - Flutter Power: Dart is the heart of Flutter, a popular framework for building beautiful and functional mobile apps.
-  - One Code, Many Places: Develop for mobile, web, and even desktop with a single codebase (primarily with Flutter).
+  1) Performance: Dart compiles to native code for speedy performance, ideal for mobile apps. Optimized for fast UI rendering and efficient execution
+  2) Easy to learn: Similar to familiar languages like Java or Javascript, making it approachable for new developers.
+  3) Flutter Integration : Seamless integration with Flutter for cross-platform mobile development.
+  4) One codebase, Many places: Develop for mobile, web, and even desktop with a single codebase (primarily with Flutter).
+  5) Stringly typed and flexibility: Offers strong typing for better error detection while maintaining some flexibility.
 */
+
+
+/* --- Limitations of Dart --- */
+/*
+  1) Limited Adoption and Community Support: Smaller community compared to more established languages like JavaScript. Fewer libraries, frameworks, and resources available.
+  2) Browser Support: Requires transpilation to JavaScript for web applications, adding complexity. Native Dart support in browsers is minimal.
+  3) Relatively Young Ecosystem: Less mature ecosystem. Limited third-party tools and integrations.
+*/
+
 
 /* --- Dart Compilators --- */
 /*
-  1) Just-In-Time (JIT):
-  2) Ahead-Of-Time (AOT):
-  3) Dart2js: 
+  1) Just-In-Time (JIT): JIT compilation is used along with dart VM when mobile or web application is developing.
+  2) Ahead-Of-Time (AOT): AOT compilation is used when the application is deploying. AOT produces native specific code based on the requirements.
+  3) Dart2js: Web apps in flutter uses Dart development-time compiler, which will transform dart code into javascript code. For final release or deployment, instead of ‘devc’, flutter uses Dart2Js compiler, which will convert the code into optimised javascript code for the web browsers.
 */
