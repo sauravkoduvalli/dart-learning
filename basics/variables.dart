@@ -17,10 +17,14 @@ String? firstName, lastName;
     - This is a special variable initialised with keyword dynamic.
     - The variable declared with this data type can store implicitly any value during running the program.
     - It is quite similar to var datatype in Dart, but the difference between them is the moment you assign the data to variable with var keyword it is replaced with the appropriate data type.
-  3) final and const variables: 
-    - A final variable can only be set once and it is initialized when accessed.
+  3) final variables: 
+    - A final variable can only be set once and it is initialized when accessed. 
+    - final dont’ allow re-assigning the variable to a new value but they do allow mutation of the value internally.
+  4) const: 
     - A constant variable is a compile-time constant and its value must be known before the program runs.
-
+    - const don’t allow re-assigning the variable to a new value and also don’t allow any type of mutation.
+  5) var: 
+    - var allows both mutations you can assign a new value to it and also change it’s internal value.
 */
 
 // dynamic and var variables example
@@ -35,7 +39,8 @@ void main() {
   // variable declared with 'var' keyword will not accept other data type of values in future, once it is initialized with a specific data type.
   var varVariable = "Saurav K";
   print(varVariable);
-  varVariable = 27061997; // Will show this compile-time error -> A value of type 'int' can't be assigned to a variable of type 'String'.
+  // uncomment the below code
+  // varVariable = 27061997; // Will show this compile-time error -> A value of type 'int' can't be assigned to a variable of type 'String'.
 
   // final variable
   final country = "India"; // assigning a value without data type.
@@ -46,5 +51,3 @@ void main() {
   const birthYear = 1997; // const variable should be initialized at the declaration time
   print(birthYear);
 }
-
-
