@@ -18,6 +18,7 @@ This is Multi Line Text
 with 3 single quote
 I am also writing here.
 ''';
+print(multiLineText);
 
 // String Concatenation: '+' operator is used to concatenate/merge two string values.
 final firstName = 'Saurav';
@@ -43,4 +44,5 @@ print(firstName.replaceAll("Saurav", "Replaced String")); // method will replace
 print(fullName.contains("Sau")); // method will check the given string is there in the string, if yes returns TRUE, else False.
 print(firstName.split('')); // method will splits the string at matches of the specified delimiter and returns the list of the substring.
 print(firstName.substring(1,5)); // It returns the substring from start index, inclusive to end index.
+print(firstName.toString()); // convert other data type to string value.
 }
