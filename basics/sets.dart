@@ -27,6 +27,23 @@ print('set2: ${set2}');
  numberSet.length; // It returns the length of the Set.
 
  // methods of sets
+final Set<String> fruits = {"Apple", "Orange", "Mango"};
+fruits.contains('Mango'); // to check whether the Set contains specific items or not, and return TRUE or FALSE.
+fruits.add('Grapes'); // Add new item to Set
+fruits.remove('Mango'); // Removes item from the set.
+fruits.addAll(['Pineapple, Cherry, Watermelon']); // Insert the multiple values/iteratable to the given Set.
+fruits.removeAll(['Pineapple','Cherry']); // Remove the items/iteratable from the gien list.
+fruits.retainAll(["Apple", "Orange", "Grapes", "Watermelon"]); // retain the elemets which are given in the list, other items will removed.
+fruits.forEach((element) => print(element)); // print all Set items by using loops.
+fruits.elementAt(2); // Returns the index value of element.
+fruits.clear(); // Removes all elements from the Set.
 
- 
+final Set<int> firstSet = {1,2,3,4,5,6};
+final Set<int> secondSet = {1,2,3,4};
+var diff = firstSet.difference(secondSet); // Creates a new Set with the elements of this that are not in other.
+print(diff); // {5, 6}
+var intersect = firstSet.intersection(secondSet); // Find common elements in two sets.
+print(intersect); // {1, 2, 3, 4}
+var union = firstSet.union(secondSet); // creates a new set with elements in both set.
+print(union); // {1, 2, 3, 4, 5, 6}
 }
