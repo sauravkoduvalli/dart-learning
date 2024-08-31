@@ -8,7 +8,7 @@
   - There are 2 type of streams:-
     1) single-subscription stream
       - Can only be listened to by a single listener at a time.
-      - Used when you know you only need to process the stream data once.
+      - Used only when to process the stream data once.
       - For example, a stream that processes HTTP responses or Reading a File (because the file contents are read once)
 
     2) broadcast stream:-

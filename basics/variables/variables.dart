@@ -25,6 +25,9 @@ String? firstName, lastName;
     - const don’t allow re-assigning the variable to a new value and also don’t allow any type of mutation.
   5) var: 
     - var allows both mutations you can assign a new value to it and also change it’s internal value.
+  6) late: 
+    - 'late' keyword is used to declare a non-nullable varibale that that will be initialized at a later point of time, rather than at the point of declaration.
+    - 
 */
 
 // dynamic and var variables example
