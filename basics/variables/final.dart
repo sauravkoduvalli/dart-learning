@@ -1,4 +1,4 @@
-/* final keyword */
+/* --- final --- */
 
 /*
   - To define constants whose values are known at runtime, you use the 'final' keyword keyword with the following syntax: final type finalVariable;

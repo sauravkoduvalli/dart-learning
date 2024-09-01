@@ -1,4 +1,4 @@
-/* const keyword */
+/* --- const --- */
 
 /* 
   - The const keyword allows you to define constants that are known at compile time.
