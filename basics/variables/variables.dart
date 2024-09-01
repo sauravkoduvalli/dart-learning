@@ -1,56 +1,71 @@
 /* --- Variables --- */
-// A variable is the name assigned to the memory location where you stores the data, and used that variable to fetch the data.
+
+/* 
+  - A variable is an identifier that stores a value of a specific type. By definition, a variable is associated with a type and has a name.
+  - Syntax for declaring a varibale - type variableName;
+  - the type specifies the values that the variable can store. Since Dart is a statically typed language, you need to explicitly specify the variable’s type.
+  - TYPE INFERENCE: A feature of Dart Compiler infer the type of the varaible when the variable is initialised without specifying the type of the variable.
+*/ 
 
 // Syntax to declare a variable is 'type variableName'
 String? name; // '?' is used to make the varibale nullable;
 
-//Syntax To declare multiple variables of the same type is 'type variableNname1, variableName2, variableName3;'
+// Syntax To declare multiple variables of the same type is 'type variableNname1, variableName2, variableName3;'
 String? firstName, lastName;
 
-/* --- Types of valriables --- */
-/*
-  1) Static variables:
-    - The static keyword is used for a class-level variable and method that is the same for every instance of a class, this means if a data member is static, it can be accessed without creating an object.
-    - The static keyword allows data members to persist Values between different instances of a class.
-    - There is no need to create a class object to access a static variable or call a static method: simply put the class name before the static variable or method name to use them.
-  2) dynamic variable: 
-    - This is a special variable initialised with keyword dynamic.
-    - The variable declared with this data type can store implicitly any value during running the program.
-    - It is quite similar to var datatype in Dart, but the difference between them is the moment you assign the data to variable with var keyword it is replaced with the appropriate data type.
-  3) final variables: 
-    - A final variable can only be set once and it is initialized when accessed. 
-    - final dont’ allow re-assigning the variable to a new value but they do allow mutation of the value internally.
-  4) const: 
+/*  
+
+Types of valriables
+
+  1) Final variables: 
+    - To define constants whose values are known at runtime use 'final' keyword.
+    - Unlike the const keyword, you don’t need to initialize the finalVariable in the declaration immediately.
+    
+  2) Const: 
     - A constant variable is a compile-time constant and its value must be known before the program runs.
     - const don’t allow re-assigning the variable to a new value and also don’t allow any type of mutation.
-  5) var: 
+
+  3) Var: 
     - var allows both mutations you can assign a new value to it and also change it’s internal value.
-  6) late: 
+
+  4) Late: 
     - 'late' keyword is used to declare a non-nullable varibale that that will be initialized at a later point of time, rather than at the point of declaration.
-    - 
+  
+  5) Static variables:
+    - The static keyword is used for a class-level variable and method.
+    - The static keyword allows data members to persist Values between different instances of a class.
+    - There is no need to create a class object to access a static variable or call a static method: simply put the class name before the static variable or method name to use them.
+
+  6) Dynamic variable: 
+    - This is a special variable initialised with keyword 'dynamic'.
+    - The variable declared with this data type can store implicitly any value during running the program.
+    - It is quite similar to var datatype in Dart, but the difference between them is, the moment you assign the data to variable with var keyword it is replaced with the appropriate data type.
+
 */
 
-// dynamic and var variables example
+
 void main() {
-  // variable declared with 'dynamic' keyword will accept any datatype of values in future.
-  dynamic dynamicVariable = "Saurav K"; // initialize with string value.
-  print(dynamicVariable);
+  // declared a variable 'httpStatusCode'
+  int httpStatusCode; 
+  // assigning a value to 'httpStatusCode'
+  httpStatusCode = 200;
 
-  dynamicVariable = 27061997; // re assign with integer value.
-  print(dynamicVariable);
+  print('http Status code: $httpStatusCode');
 
-  // variable declared with 'var' keyword will not accept other data type of values in future, once it is initialized with a specific data type.
-  var varVariable = "Saurav K";
-  print(varVariable);
-  // uncomment the below code
-  // varVariable = 27061997; // Will show this compile-time error -> A value of type 'int' can't be assigned to a variable of type 'String'.
+  // assinging a variable to another
+  int response = httpStatusCode;
 
-  // final variable
-  final country = "India"; // assigning a value without data type.
-  print(country);
-  final String state = "Kerala"; // assigning a value with data type.
-  print(state);
+  print('repsonse:  $response');
+  // re-assigning variable 'httpStatusCode' with a new value.
+  // This will not affect the 'response' variable's value which is assigned before 'httpStatusCode' reassigned with new value.
+  httpStatusCode = 201;
 
-  const birthYear = 1997; // const variable should be initialized at the declaration time
-  print(birthYear);
+  print('http Status code: $httpStatusCode, response: $response');
+
+  // Example for type inferece in dart
+  var ideName = 'VS code';
+
+  // dart compiler understand that this variable is initialised with a string value.
+  print(ideName.runtimeType); // 'runtimeType' will return the object type of variable at runtime.
 }
+
