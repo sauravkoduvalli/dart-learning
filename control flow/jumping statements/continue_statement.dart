@@ -1,27 +1,36 @@
 /* --- Continue statement --- */
 
 /*
-  - Used to skips the current iteration of a loop. It will bypass the statement of the loop
-  - It does not terminate the loop but rather continues with the next iteration.
+  - The continue statement allows you to skip the current iteration of the loop prematurely and start the next iteration immediately.
+  - The 'continue' statement is only valid when you use it inside a loop, including while, do while, and for loops.
 */
 
 void main() {
-  // The loop will execute till the value of i becomes less than 0 from initial value 10.
-  // when the value of i becomes 5, it skip the execution of that perticular block and continue with next iteration.
-  for (var i = 10; i > 0; i--) {
-    if (i == 5) {
+  /// The for loop iterates the number from 0 to 9 and assigns the nnumber to the variable i in each iteration.
+  /// if the current value of i is even the the continue statement execute and skip the furthe code inside loop. So that the print will not execute.
+  /// Otherwise, (the value of i is odd or the if condition is false) the continue statement will not execute and it will print the value of i of that perticular iteration.
+  for (var i = 0; i < 10; i++) {
+    if (i % 2 == 0) {
       continue;
     }
     print(i);
   }
 
-  int i = 10;
-  while (i > 0) {
-    if (i == 7) {
-      i--;
+  print('\n'); // new line
+
+  /// Using the continue statement in a while loop example.
+  /// First, each iteration of while will increase the value of i by one until i becomes 9.
+  /// Second, if the variable i is an even number, the condition of the if statement inside the while loop will execute and skip the remaining statements after it.
+  /// Third, if the variable i is odd number, it will add an odd number to the total variable and print the current value of i.
+  /// Finally, display the the total number after the loop.
+  int i = 0, total = 0;
+  while (i < 10) {
+    i++;
+    if (i % 2 == 0) {
       continue;
     }
+    total = total + i;
     print(i);
-    i--;
   }
+  print('total = $total');
 }

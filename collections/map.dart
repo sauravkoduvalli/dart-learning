@@ -13,15 +13,16 @@
     2) Map Constructor
 */
 
-void main(){// Using map literals
+void main(){
+/// Using map literals
 final map1 = {'name': 'Saurav', 'age': 27, 'location': 'Kannur'};
 print(map1['age']);
 
-// Using Map constructor
+/// Using Map constructor
 final Map map2 = {'name': 'Raji', 'age': 26, 'location': 'Kochi'};
 print(map2['name']);
 
-// Proprties of Map
+/// Proprties of Map
 final Map person = {'name': 'Adhi', 'age': 2, 'location': 'Kannur'};
 var personKeys = person.keys; // To get all keys.
 print(personKeys); // (name, age, location)
@@ -36,19 +37,19 @@ person['country'] = 'India'; // Adding new item to existing Map.
 person['location'] = 'Bengaluru'; // Updating an existing item in the Map.
 print(person); // {name: Adhi, age: 2, location: Bengaluru, country: India}
 
-// Loops in Map
-// You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
-// for in loop
+/// Loops in Map
+/// You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
+/// for in loop
 for(MapEntry person in person.entries) {
   print('key is ${person.key}  and value is ${person.value}');
 }
 
-// foreeach loop
+/// foreeach loop
 person.forEach((key, value) {
   print('key is ${key}  and value is ${value}');
 });
 
-// Methods of Map
+/// Methods of Map
 person.keys.toList(); // Convert all Maps keys to List.
 person.values.toList(); // Convert all Maps values to List.
 person.containsKey('name'); // Return true or false based on key existance.

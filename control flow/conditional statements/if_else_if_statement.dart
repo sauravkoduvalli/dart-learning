@@ -1,20 +1,25 @@
 /* ---If-else-if statement */
 
 /*
-  - Used to check a set of test expressions and execute different statements based on the conditions.
+  - Used to check muliple conditions and execute different statements if a condition is true. Otherwise nothing will execute.
   - It is used when we have to make decisions from more than two possiblities.
 */
 
 void main() {
-  var a = 130;
-  var b = 20;
-  var c = 0;
+  String season = "";
+  String month = "Feb";
 
-  if (a >= b && a >= c) {
-    print("A is greater");
-  } else if (b >= a && b >= c) {
-    print("B is greater");
+  if (month == "Jan" || month == "Feb" || month == "March") {
+    season = "Spring";
+  } else if (month == "Apr" || month == "Jun" || month == "July") {
+    season = "Summer";
+  } else if (month == "Aug" || month == "Sep" || month == "Oct") {
+    season = "Autumn";
+  } else if (month == "Nov" || month == "Dec" || month == "Jan") {
+    season = "Winter";
   } else {
-    print("C is greater");
+    season = "Invalid";
   }
+
+  print(season);
 }

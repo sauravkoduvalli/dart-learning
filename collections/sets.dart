@@ -10,15 +10,16 @@
     2) Declare a variable type 'Set' with curly braces.
 */
 
-void main(){// Declaration method 1:
+void main(){
+/// Declaration method 1:
 var set1 = <int>{1,2,3,4};
 print('set1: ${set1}');
 
-// Declaration method 2:
+/// Declaration method 2:
 final Set<int> set2 = {5,6,7,8};
 print('set2: ${set2}');
 
-// properties of sets
+/// properties of sets
  Set<int> numberSet = {1,2,3,4,5,6,7,8,9,0};
  numberSet.first; // To get first value of Set.
  numberSet.last; // To get last value of Set.
@@ -26,7 +27,7 @@ print('set2: ${set2}');
  numberSet.isNotEmpty; // To check and return boolean value if the set is not empty (TRUE) or not(FALSE).
  numberSet.length; // It returns the length of the Set.
 
- // methods of sets
+/// methods of sets
 final Set<String> fruits = {"Apple", "Orange", "Mango"};
 fruits.contains('Mango'); // to check whether the Set contains specific items or not, and return TRUE or FALSE.
 fruits.add('Grapes'); // Add new item to Set

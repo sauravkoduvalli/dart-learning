@@ -57,5 +57,4 @@ void main() {
   bool isAlien = fromEarth || isHuman ; // as you can see the value of 'fromEarth variable is not evaluating by the dart compiler.
   print("Are you an Alien: $isAlien"); 
 
-
 }

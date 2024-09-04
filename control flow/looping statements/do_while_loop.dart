@@ -1,16 +1,29 @@
 /* --- do...while loop --- */
 
 /*
-  - similar to the while loop but only difference is that, it executes the loop statement and then check the given condition.
+  - Similar to the while loop, but only difference is that, evaluates the expression at the end of each iteration. Therefore, it’s called a POSTSET LOOP.
+  - The do while statement always executes the first iteration whether the result of the expression is true or not.
+
 */
 
 void main() {
-  var minNum = 1;
-  var MaxNum = 10;
+  int start = 0;
+
+  /// Program will count from 1 to 5 using do while loop.
+  do {
+    start++;
+    print(start);
+  } while (start < 5);
+
+  print('\n'); // New line
+
+  /// Using the do while statement to display odd numbers
+  int count = 0;
 
   do {
-    print(minNum);
-    minNum = minNum + 1;
-  } while (minNum <= MaxNum);
+    if (count % 2 != 0) {
+      print(count);
+    }
+    count++;
+  } while (count <= 10);
 }
-

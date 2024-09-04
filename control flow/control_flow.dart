@@ -3,7 +3,7 @@
 /*
   - The control statement or flow of control statement used to decide whether other statement executed or not.
   - the code generally executing in sequential order. So, we may require to execute or skip some group of statement based on the condition, jump to another statement or repeat the same statement execution.
-  - Control flow can be catagorised into 3:
+  - Control flow can be catagorised into three types:
     1) Decision making statements
     2) Looping statements
     3) Jumping statements
@@ -24,14 +24,10 @@
     - Ex: Continue statement, Break statement
 */
 
-
-
 /*
   Selection of the loop
   
-  -Analyze the problem and observe that whether you need a pre-test loop or post-test loop. 
-  - A pre-test loop is that, the condition is tested before entering the loop. 
-  - In the post-test loop, the condition is tested after entering the loop.
-  - If we require a pre-test loop, then select the while or for loop.
-  - If we require a post-test loop, then select the do-while loop.
+  - Analyze the problem and observe that whether you need a pre-test loop or post-test loop. 
+  - A pre-test loop is that, the condition is tested before entering the loop. Example. while or for loop. 
+  - In the post-test loop, the condition is tested after entering the loop. Example, do-while loop.
 */
