@@ -23,6 +23,7 @@ void main() {
   /// Second, if the variable i is an even number, the condition of the if statement inside the while loop will execute and skip the remaining statements after it.
   /// Third, if the variable i is odd number, it will add an odd number to the total variable and print the current value of i.
   /// Finally, display the the total number after the loop.
+  /// 
   int i = 0, total = 0;
   while (i < 10) {
     i++;
