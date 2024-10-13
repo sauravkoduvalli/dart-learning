@@ -1,4 +1,4 @@
-/* --- Object and Class */
+/* --- Object and Class ---*/
 
 /*
   - Dart is an object oriented programming language, and in dart everything is an object.
