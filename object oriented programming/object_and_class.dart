@@ -61,6 +61,7 @@ void main() {
 
 
   // With is operator, we can check p1 is an instance of a class.
+  // ignore: unnecessary_type_check
   print(p1 is Point); // true
 
 }
