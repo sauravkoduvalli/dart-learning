@@ -44,7 +44,7 @@ class Example{
   // Static method
   static void staticMethod() {
     print("static method can only access static variables, not instance variables");
-    print('Instance variable: $instanceVariable'); // this will throw error.
+    // print('Instance variable: $instanceVariable'); // this will throw error.
     print('static method: $staticVariable');
   }
 }
