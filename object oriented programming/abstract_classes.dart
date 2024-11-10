@@ -1,4 +1,4 @@
-/* Abstract Class */
+/* --- Abstract Class --- */
 
 // Concrete class - Classes from which can create new object out of it.
 
