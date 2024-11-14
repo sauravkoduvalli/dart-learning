@@ -3,7 +3,7 @@
 /*
   - Getters and Setters are special methods that allow controlled access to the properties of an object.
   - They enables you to encapsulate and manage how the data or fields in a class is accessed and modified.
-  - Using getters and setters, you ca add logic, when getting or setting a value, such as validation or data transformation.
+  - Using getters and setters, you can add logic, when getting or setting a value, such as validation or data transformation.
 
   1) Getter: Used to access a property/field.
   2) Setter: Used to modify a property/field.

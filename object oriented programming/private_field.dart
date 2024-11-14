@@ -71,5 +71,5 @@ void main() {
 
   Square(5); // Square of 5 is 25
 
-  Rectangle(4, 5); // Output: Rectangle created with width: 4, height: 5, area: 20
+  Rectangle(-4, 5); // Output: Rectangle created with width: 4, height: 5, area: 20
 }

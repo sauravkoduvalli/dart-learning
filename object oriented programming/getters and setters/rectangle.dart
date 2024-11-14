@@ -27,6 +27,6 @@ class Rectangle {
     }
   }
 
-  // getter for are of the rectangle (read-only property)
+  // getter for area of the rectangle (read-only property)
   double get area => _height * _width;
 }
