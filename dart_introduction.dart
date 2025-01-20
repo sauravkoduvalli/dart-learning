@@ -27,7 +27,16 @@
 
 /* --- Dart Compilators --- */
 /*
-  1) Just-In-Time (JIT): JIT compilation is used along with dart VM when mobile or web application is developing.
-  2) Ahead-Of-Time (AOT): AOT compilation is used when the application is deploying. AOT produces native specific code based on the requirements.
-  3) Dart2js: Web apps in flutter uses Dart development-time compiler, which will transform dart code into javascript code. For final release or deployment, instead of ‘devc’, flutter uses Dart2Js compiler, which will convert the code into optimised javascript code for the web browsers.
+  1) Just-In-Time (JIT): 
+    - JIT compilation is used during the development phase. It allows developers to see the changes in the code immediately.
+    - JIT compiles the code into machine code at runtime, which makes the debugging process easier.
+  2) Ahead-Of-Time (AOT): 
+    - AOT compilation is used when the application is deploying.
+    - AOT produces native specific code based on the requirements.
+    - AOT compilation is used to improve the performance of the application.
+  3) Dart2js: 
+    - Dart2js is a Dart-to-JavaScript compiler that allows Dart code to run in web browsers.
+    - Web apps in flutter uses Dart development-time compiler, which will transform dart code into javascript code. 
+    - For final release or deployment, instead of ‘devc’, flutter uses Dart2js compiler, which will convert the code into optimised javascript code for the web browsers.
+
 */
