@@ -1,5 +1,3 @@
-/* --- Streams in dart --- */
-
 /*
   - Stream is used to handle sequences of asynchronous events or data over time.
   - Streams are similar to Future, but instead of delivering a single value, they can deliver many values over time.

@@ -1,5 +1,3 @@
-/* --- Functions in dart --- */
-
 /*
   - A function is a block of code that performs a specific task.
   - Used when some statements are repeatedly occuring in the program. Thus helps reusablity of the code in the program.
@@ -41,7 +39,6 @@
   ----------------------
   Parameter: A parameter is a variable that you specify in the function signature when you define the function.
   Argument: An argument is a value or variable that you pass into the function when calling it.
-
 
   Returning a value: 
     - A function may return a value.

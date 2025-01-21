@@ -7,7 +7,7 @@
 
   How Mixins Work
   ---------------
-  - Declaration: A mixin is defined using the mixin keyword.
+  - Declaration: A mixin is defined using the 'mixin' keyword.
   - Usage: You can apply a mixin to a class using the with keyword.
   - Functionality: A mixin can contain methods, properties, and even its own superclass.
 

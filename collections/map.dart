@@ -1,5 +1,3 @@
-/* --- Map --- */
-
 /*
   - An object collection that stores data in the form of key-value pairs.
   - Each value is associated with a key, which is used to access its corresponding value.
@@ -37,16 +35,16 @@ person['country'] = 'India'; // Adding new item to existing Map.
 person['location'] = 'Bengaluru'; // Updating an existing item in the Map.
 print(person); // {name: Adhi, age: 2, location: Bengaluru, country: India}
 
-/// Loops in Map
-/// You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
-/// for in loop
+// Loops in Map
+// You can use any loop in Map to print all keys/values or to perform operations in its keys and values.
+// for in loop
 for(MapEntry person in person.entries) {
   print('key is ${person.key}  and value is ${person.value}');
 }
 
-/// foreeach loop
+// forEach loop: forEach loop is used to iterate over the elements of the map and perform some operation on them.
 person.forEach((key, value) {
-  print('key is ${key}  and value is ${value}');
+  print('key is ${key}  and value is ${value}'); 
 });
 
 /// Methods of Map
@@ -57,5 +55,3 @@ person.containsValue('Adhi'); // Return true or false based on value existance.
 person.remove('age'); // Removes [key] and its associated value, if present, from the map.
 person.removeWhere((key, value) => value < 2); // Removes all entries of this map that satisfy the given [test].
 }
-
-

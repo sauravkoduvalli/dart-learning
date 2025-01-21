@@ -1,5 +1,3 @@
-/* --- Function as First class objects --- */
-
 /* 
   - In dart, functions are first class objects, which means, we can treat a fucntion as a value of other types.
   - So
@@ -9,6 +7,7 @@
 
 */
 
+// Assign a function to a variable.
 int add(int num1, int num2) {
   return num1 + num2;
 }
@@ -58,29 +57,29 @@ void main() {
   var sum = func(10, 1);
   print(sum);
 
-  print('\n'); // new line
+  print('-----------------------');
 
   // Passing a function to another function as an argument
   // pass the isEvenNumber as an argument into show function
   print('Even numbers:');
   show(isEvenNumber);
 
-  print('\n'); // new line
+  print('-----------------------');
 
   // pass the isOddNumber as an argument into show function
   print('Odd numbers:');
   show(isOddNumber);
 
-  print('\n'); // new line
+  print('-----------------------');
 
   // Returning a function from a function
   // calling the calculation function, and assign the result to the fn variable, and call the function via the fn variable
   // This code displays 30 because the calculation() function returns the addition() function
-  var fun = calculation('+'); 
-  print(fun(10, 20)); 
+  var funAdd = calculation('+'); 
+  print(funAdd(10, 20)); 
 
   // calling the calculation function, and assign the result to the fn variable, and call the function via the fn variable
   // This code displays 20 because the calculation() function returns the subtraction() function
-  fun = calculation('-');
-  print(fun(30, 10));
+  var funSubtract = calculation('-');
+  print(funSubtract(30, 10));
 }

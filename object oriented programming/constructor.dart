@@ -34,72 +34,97 @@
     - It reduces code duplication by redirecting to another constructor.
 
   7) Factory Constructor:
-    - To control the creation of objects, potentially returning existing instances from a cache, a new instance, or an instance of a subclass.
+    - A factory constructor in Dart is a special type of constructor that allows you to control the creation of objects. 
+    - Unlike a normal constructor, a factory constructor doesn’t always create a new instance of the class. 
+    - It can return an existing instance, a cached instance, or an instance of a subclass.
     - 'factory' keyword is used to define a factory constructor.
     - Must return an instance of the class or a subclass.
     - No this keyword: Cannot directly access instance variables or methods.
     - Can return different object types based on conditions.
+    - Does not allocate memory directly. It can:
+      - Return an existing object.
+      - Create a new object.
+      - Return an object from a different class.
+    - Ideal for implementing design patterns like 'singleton' or 'factory pattern'.
 
+    Constructor initialization list:
+    -------------------------------
+    - a constructor initialization list allows you to initialize instance variables before the constructor body executes. 
+    - It’s defined using a colon (:) after the constructor's declaration.
+
+    Why Use Constructor Initialization List?
+    - To initialize final or const instance variables.
+    - To set up values that depend on constructor parameters.
+    - To call the superclass constructor in inheritance.
+    - To run code before the constructor body executes.
 */
 
-class DefaultClass {
+class Default {
   int x = 0, y = 0;
 
   // This is a default constructor.
-  DefaultClass() {
+  Default() {
     print("default constructor called");
   }
 }
 
-class CustomClass {
+class Custom {
   late int x, y;
 
   // Dart calls the following constructor as a long-form constructor.
-  CustomClass(int x, int y) {
+  Custom(int x, int y) {
     this.x = x;
     this.y = y;
     this.show();
   }
+
   void show() {
     print('Value of x and y is $x, $y');
   }
 
   // Also, Dart has a short-form constructor where you don’t provide the body.
-  // Instead, you list the properties that you want to initialize like this: CustomClass(int x, int y);
+  // Instead, you list the properties that you want to initialize like this: Custom(this.x, this.y);
   // In the short-form constructor, Dart infers the types of parameters as integers.
   // The short-form constructor works like the long-form constructor but the code is more concise.
 }
 
-class NamedClass {
+class Named {
   late int x, y;
 
-  NamedClass(
-      this.x, this.y); // parameterized or custom or short-form constructor
+  // this is a custom constructorw ith positional parameters.
+  Named(this.x, this.y);
 
   // this a named constructor assigning value 0 to x and y properties.
-  NamedClass.origin() {
+  Named.origin() {
     this.x = 0;
     this.y = 0;
+    print('value of x and y is $x, $y');
   }
 }
 
-class NamedParameterClass {
+class NamedParameter {
   int x, y;
 
-  NamedParameterClass({required this.x, required this.y}); // Named parameters
+  // Named parameters
+  NamedParameter({required this.x, required this.y});
 
   void display() {
     print('x = $x, y = $y');
   }
 }
 
-class RedirectingClass {
+class Redirecting {
   int x, y;
 
-  RedirectingClass(this.x, this.y); // custom or parameterized constructor.
+  // this is a custom constructor with positional parameters.
+  Redirecting(this.x, this.y);
 
-  // the named constructor 'changeXValue' has a parameter 'x' which will change the value of x peroperty and set the y value to 0.
-  RedirectingClass.changeXValue(int x) : this(x, 0);
+  // Redirecting constructor to change the value of x by calling the constructor with only x value.
+  // Then it will call the main constructor to set the value of y to 0 and x to the value passed.
+  Redirecting.changeXValue(int x) : this(x, 0);
+
+  // Redirecting constructor to set the value of x and y to 0.
+  Redirecting.origin() : this(0, 0);
 
   void display() {
     print('x = $x, y = $y');
@@ -108,17 +133,31 @@ class RedirectingClass {
 
 void main() {
   // creating an object 'obj1' from the DefaultClass class which will call its constructor.
-  DefaultClass();
+  Default();
+  print('-------------------');
+  // creating an object 'obj2' from Custom which initilizes the Constructor by providing values to x and y properties.
+  Custom(11, 22);
+  print('-------------------');
 
-  // creating an object 'obj2' from CustomClass which initilizes the Constructor by providing values to x and y properties.
-  CustomClass(11, 22);
+  // this will set the values of x and y properties.
+  Named(111, 222);
+  print('-------------------');
 
-  NamedClass(111, 222); // this will set the values of x and y properties.
-  NamedClass
-      .origin(); // this will call the named constructor 'origin()' and set the values of x and y to 0.
+  // this will call the named constructor 'origin()' and set the values of x and y to 0.
+  Named.origin();
+  print('-------------------');
 
-  NamedParameterClass(x: 10, y: 20); // named parameters for more readable code.
+  // named parameters for more readable code.
+  NamedParameter(x: 10, y: 20);
+  print('-------------------');
 
-  var redirectingObject = RedirectingClass.changeXValue(5);
+  // redirecting constructor to change the value of x.
+  var redirectingObject = Redirecting.changeXValue(5);
+  redirectingObject.display();
+  print('-------------------');
+
+  // redirecting constructor to set the value of x and y to 0.
+  redirectingObject = Redirecting.origin();
   redirectingObject.display();
 }
+

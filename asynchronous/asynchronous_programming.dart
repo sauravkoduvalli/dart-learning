@@ -8,7 +8,7 @@
 /* --- Asynchronous Programming --- */
 /*
   - Asynchronous programming is a way to write program that allows to do multiple tasks at the same time.
-  - Time consuming operations like fetching data form the internet, writing to database, reading from a file, and dwnloading a file can be performed without blocking the main thread of execution.
+  - Time consuming operations like fetching data form the internet, writing to database, reading from a file, and downloading a file can be performed without blocking the main thread of execution.
   - Program execution continues to the next line without waiting to complete other work.
   - It represents the task that doesn’t need to solve before proceeding to the next one.
   - Dart provides several features for handling asynchronous operations, including 'Future', 'async', 'await', and 'Stream'.
@@ -34,3 +34,4 @@ void main() {
   synchronousFunction();
   asynchronousFunction().then((value) => print(value)); 
 }
+

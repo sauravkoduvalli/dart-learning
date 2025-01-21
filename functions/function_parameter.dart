@@ -1,5 +1,3 @@
-/* --- Function Parameter --- */
-
 /*
   - A function can have any number of required positional parameters. 
   - These can be followed either by named parameters or by optional positional parameters (but not both).
@@ -39,10 +37,7 @@ void voterDetails(String name, [String title = '']) {
   }
 }
 
-/// function consist of 3 parameters- brand, model, and color.
-/// brand is positional parameter.
-/// model is required named parameters.
-/// color is an optional named parameter having a default value is empty string.
+// function consist of one positional parameter and two named parameters.
 void carDetails(String brand, {required String model, String color = ''}) {
   if (color.isNotEmpty) {
     print('I own a $brand $model model, with $color color');
@@ -51,7 +46,7 @@ void carDetails(String brand, {required String model, String color = ''}) {
   }
 }
 
-/// Optional Parameter
+// function consist of 3 positional parameters, 2nd and 3rd are optional.
 String say(String from, message, [String? device]) {
   var result = '$from says $message';
   if (device != null) {

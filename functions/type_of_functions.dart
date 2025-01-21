@@ -1,5 +1,3 @@
-/* --- Type of Functions --- */
-
 /*
   Different types of functions are:
   1) No parameter and no return type: Functions with no parameters and no return type. return type will be void.
@@ -9,12 +7,11 @@
 */
 
 void main() {
-  // function with no parameter and no retunr type
-  void printName() {
-    print('Saurav K');
-  }
-
+  // function with no parameter and no return type
+  void printName() => print('Saurav K');
   printName();
+
+  print('-------------------');
 
   // function with two parameters and no return type
   void sum(int num1, int num2) {
@@ -23,12 +20,13 @@ void main() {
 
   sum(10, 5);
 
-  // function with no parameters and return type
-  num valueOfPi() {
-    return 3.14;
-  }
+  print('-------------------');
 
+  // function with no parameters and return type
+  num valueOfPi() => 3.14;
   valueOfPi();
+
+  print('-------------------');
 
   // function with parameters and return type
   double calculateInterest(double principle, double rate, double time) {

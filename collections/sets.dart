@@ -1,5 +1,3 @@
-/* --- Sets --- */
-
 /*
   - Unordered, unique collection of different values of same type.
   - Same functionality as array, but unordered (Cannot keep the order of items).
@@ -38,6 +36,14 @@ fruits.retainAll(["Apple", "Orange", "Grapes", "Watermelon"]); // retain the ele
 fruits.forEach((element) => print(element)); // print all Set items by using loops.
 fruits.elementAt(2); // Returns the index value of element.
 fruits.clear(); // Removes all elements from the Set.
+
+// Set operations
+// --------------
+// Set operations are performed on two sets to find the difference, intersection, and union of two sets.
+// difference: Creates a new Set with the elements of this that are not in other and return a new set.
+// intersection: Find common elements in two sets and return a new set.
+// union: creates a new set with elements in both set and return a new set.
+
 
 final Set<int> firstSet = {1,2,3,4,5,6};
 final Set<int> secondSet = {1,2,3,4};

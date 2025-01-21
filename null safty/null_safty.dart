@@ -2,6 +2,12 @@
   - Null safety is a feature that helps you avoid common null exception errors.
   - oprators like, !, ??, ??=, ?. and late keyword are used to handle null values.
   - Null safety is enabled by default in Dart 2.12 and later.
+
+  benefits of Null Safety
+  - Eliminates null pointer exceptions: eliminates the risk of null pointer exceptions by making all values non-nullable by default.
+  - Reduced Runtime Errors: Prevents many common runtime errors caused by null values
+  - Improves performance: improve performance by eliminating the need for null checks.
+  - Reduces the need for null checks: Reduces the need for null checks by making it clear when a value can be null.
   
     1) Non-Nullable Assertions (!) :  
       - The non-nullable assertion operator (!) is used to assert that a variable is not null.
@@ -10,12 +16,13 @@
     2) Nullable Access (?.):
       - The null-aware access operator (?.) is used to access properties and methods of an object that might be null.
       - If the object is null, the expression evaluates to null.
+      - The null-aware operator can be chained: object?.property1?.property2.
 
     3) Conditional Property Access (?.):
       - The conditional property access operator (?.) is used to access properties of an object that might be null.
       - If the object is null, the expression evaluates to null.
 
-    4) Null-aware Assignment/Default value Access (??=):
+    4) Null-aware Assignment (??=):
       - The null-aware assignment operator (??=) assigns a value to a variable only if that variable is currently null.
       - If the variable is not null, the value is not assigned.
 

@@ -1,5 +1,3 @@
-/* --- Interface --- */
-
 /*
   - An interface is a contract between classes.
   - Dart has no interface keyword. Instead, all classes are implicit interfaces.
